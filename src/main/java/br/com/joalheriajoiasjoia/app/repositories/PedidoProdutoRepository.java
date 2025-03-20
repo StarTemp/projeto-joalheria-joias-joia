@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import br.com.joalheriajoiasjoia.app.entities.PedidoProduto;
 
-@Repository
 public interface PedidoProdutoRepository  extends JpaRepository<PedidoProduto, Long>{
 
 }

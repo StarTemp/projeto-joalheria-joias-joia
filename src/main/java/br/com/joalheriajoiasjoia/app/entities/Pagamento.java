@@ -1,6 +1,6 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDateTime; 
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,6 +35,7 @@ public class Pagamento {
             @OneToOne
             @JoinColumn(name = "pedidoId")
             private Pedido pedidoId;
+            //many to one com o pagamento
             
             //construtores
             public Pagamento() {

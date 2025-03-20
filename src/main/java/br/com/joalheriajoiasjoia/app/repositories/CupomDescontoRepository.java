@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import br.com.joalheriajoiasjoia.app.entities.CupomDesconto;
 
-@Repository
 public interface CupomDescontoRepository extends JpaRepository<CupomDesconto, Long> {
 
 }
