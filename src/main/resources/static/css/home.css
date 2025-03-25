@@ -1,11 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
-    --salmao: #ff5c5c;
+    --salmao: #8e6854;
 }
 
 body {
@@ -22,22 +22,31 @@ body {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    /* justify-content: space-between; */
     align-items: center;
-    padding: 0 20px;
+    padding: 5px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    width: 33%;
+}
+
+.logo1 {
+    height: 20%;
+    width: 20%;
 }
 
 .site-name {
     font-size: 20px;
+    width: 33%;
+    text-align: center;
 }
 
 .auth a {
-    color: white;
+    color: rgb(123, 91, 59);
     margin: 0 10px;
     text-decoration: none;
 }
@@ -55,18 +64,23 @@ body {
 }
 
 .navbar a {
-    color: white;
+    color:rgb(123, 91, 59);
     text-decoration: none;
     padding: 10px 20px;
     font-size: 16px;
 }
 
 .navbar a:hover {
-    background-color: #444;
+    background-color: #f0d5ae;
     border-radius: 5px;
 }
 
 /* Ofertas */
+
+#ofertasespeciais {
+    text-align: center;
+}
+
 .main-offers {
     padding: 20px;
     background-color: #fff;
@@ -104,7 +118,7 @@ body {
 }
 
 .offer button:hover {
-    background-color: #ff4040;
+    background-color: #754f39;
 }
 
 /* Categorias */
@@ -120,7 +134,8 @@ body {
 }
 
 .category img {
-    width: 100%;
+    height: 200px;
+    width: 200px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -130,24 +145,25 @@ body {
 }
 
 .category button {
-    background-color: #ff5c5c;
+    background-color: rgb(123, 91, 59);
+    justify-content: center;
     color: white;
     border: none;
     padding: 20px;
     cursor: pointer;
-    width: 100%;
+    width: 200px;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 .category button:hover {
-    background-color: #ff4040;
+    background-color: #684a2e;
 }
 
 /* Rodapé */
 .footer {
     background-color: #f0d5ae;
-    color: white;
+    color: rgb(123, 91, 59);
     padding: 20px;
 }
 
@@ -177,4 +193,8 @@ body {
     background-image: url(../fotosJoias/fundo2.jpg);
     background-size: cover;
     background-position: center;
+}
+.auth {
+    width: 33%; 
+    text-align: right;
 }
