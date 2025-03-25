@@ -27,7 +27,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## 🔧 Funcionalidades
 
-- 📌 Cadastro e gerenciamento de clientes  
+- 📌 Cadastro e gerenciamento de clientes   
 - 📌 Catálogo de produtos com categorias, tipos, materiais e pedras preciosas  
 - 📌 Sistema de login e autenticação de usuários  
 - 📌 Carrinho de compras e pedidos  
