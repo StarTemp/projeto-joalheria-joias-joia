@@ -16,7 +16,10 @@ public class Tipo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idTipo;
 	
-	@Column
+	@Column(name = "nome", nullable = false)
+    private String nome;
+	
+	@Column(name = "descricao", nullable = false)
 	private String descricao;
 	
 	//CONSTRUTORES

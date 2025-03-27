@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const preco = document.getElementById("preco").value;
 		const descricao = document.getElementById("descricao").value;
 		const imgUrl = document.getElementById("imgUrl").value;
-		const tipo = document.getElementById("tipo").value;
-		const categoria = document.getElementById("categoria").value;
-		const material = document.getElementById("material").value;
+		const categoriaProduto = parseInt(document.getElementById("categoriaProduto").value);
+		const tipoProduto = parseInt(document.getElementById("tipoProduto").value);
+		
 
 		try { 
 
@@ -24,9 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 					preco,
 					descricao,
 					imgUrl,
-					tipo, 
-					categoria, 
-					material
+					categoria: {
+						id:  categoriaProduto
+					}, 
+					tipo :{
+						id: tipoProduto
+					}
 				}),
 
 			});

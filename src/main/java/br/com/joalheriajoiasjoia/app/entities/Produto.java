@@ -39,12 +39,13 @@ public class Produto {
 	private Tipo tipo;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoria")
+	@JoinColumn(name = "categoria", nullable = false)
 	private Categoria categoria;
 	
 	@ManyToOne
-    @JoinColumn(name = "pedidoId")
-    private Produto pedidoId;
+	@JoinColumn(name = "idOrnamentoProduto", nullable = false)
+    private Long idOrnamentoProduto;
+	
 	
 	//CONSTRUTORES
 	public Produto() {

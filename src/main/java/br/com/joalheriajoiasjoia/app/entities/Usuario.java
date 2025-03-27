@@ -39,7 +39,7 @@ public class Usuario {
 	private String senha;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipoUsuario")
+	@JoinColumn(name = "tipoUsuario", nullable = false)
 	private TipoUsuario tipoUsuario;
 
 	// Construtores
