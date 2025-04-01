@@ -44,7 +44,7 @@ public class Produto {
 	
 	@ManyToOne
 	@JoinColumn(name = "idOrnamentoProduto", nullable = false)
-    private Long idOrnamentoProduto;
+    private OrnamentoProduto idOrnamentoProduto;
 	
 	
 	//CONSTRUTORES

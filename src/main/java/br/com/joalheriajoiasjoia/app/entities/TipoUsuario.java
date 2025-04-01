@@ -14,7 +14,7 @@ public class TipoUsuario {
 	//Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTipo_usuario", nullable = false)
+    @Column(name = "idTipoUsuario", nullable = false)
     private Long idTipoUsuario;
 
     @Column(name = "nome", nullable = false)
@@ -29,6 +29,7 @@ public class TipoUsuario {
         this.nome = nome;
         
     }
+    //getters e setters
     public Long getIdTipo_usuario() {
         return idTipoUsuario;
     }
