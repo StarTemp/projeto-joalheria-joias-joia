@@ -1,11 +1,11 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
-    --salmao: #8e6854;
+    --salmao: #ff5c5c;
 }
 
 body {
@@ -22,31 +22,22 @@ body {
 
 .header-content {
     display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 0 20px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    width: 33%;
-}
-
-.logo1 {
-    height: 20%;
-    width: 20%;
 }
 
 .site-name {
     font-size: 20px;
-    width: 33%;
-    text-align: center;
 }
 
 .auth a {
-    color: rgb(123, 91, 59);
+    color: white;
     margin: 0 10px;
     text-decoration: none;
 }
@@ -64,27 +55,21 @@ body {
 }
 
 .navbar a {
-    color:rgb(123, 91, 59);
+    color: white;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 16px;
 }
 
 .navbar a:hover {
-    background-color: #f0d5ae;
+    background-color: #444;
     border-radius: 5px;
 }
 
 /* Ofertas */
-
-#ofertasespeciais {
-    text-align: center;
-}
-
 .main-offers {
     padding: 20px;
     background-color: #fff;
-    
 }
 
 .offers {
@@ -92,7 +77,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 10px;
-    
 }
 
 .offer img {
@@ -120,7 +104,7 @@ body {
 }
 
 .offer button:hover {
-    background-color: #754f39;
+    background-color: #ff4040;
 }
 
 /* Categorias */
@@ -130,15 +114,13 @@ body {
 }
 
 .category-items {
-    display: flex;
-    margin-left: 70px;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .category img {
-    height: 200px;
-    width: 200px;
+    width: 100%;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -148,25 +130,24 @@ body {
 }
 
 .category button {
-    background-color: rgb(123, 91, 59);
-    justify-content: center;
+    background-color: #ff5c5c;
     color: white;
     border: none;
     padding: 20px;
     cursor: pointer;
-    width: 200px;
+    width: 100%;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 .category button:hover {
-    background-color: #684a2e;
+    background-color: #ff4040;
 }
 
 /* Rodapé */
 .footer {
     background-color: #f0d5ae;
-    color: rgb(123, 91, 59);
+    color: white;
     padding: 20px;
 }
 
@@ -193,11 +174,7 @@ body {
 #image-container {
     width: 100%;
     height: 500px;
-    background-image: url(../images/container.png);
+    background-image: url(../fotosJoias/fundo2.jpg);
     background-size: cover;
     background-position: center;
-}
-.auth {
-    width: 33%; 
-    text-align: right;
 }
