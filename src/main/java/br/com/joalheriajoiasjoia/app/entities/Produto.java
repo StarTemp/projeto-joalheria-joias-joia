@@ -16,6 +16,7 @@ public class Produto {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idProduto")
 	private Long idProduto;
 	
 	@Column(name = "nome")

@@ -30,7 +30,7 @@ public class Endereco {
 	@Column(name = "cidade")
 	private String cidade;
 	
-	@Column(name = "cep", length = 8, unique = true)
+	@Column(name = "cep", length = 8)
 	private String cep;
 	
 	@Column(name = "complemento")

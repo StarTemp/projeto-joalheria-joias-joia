@@ -35,11 +35,11 @@ public class Usuario {
 	@Column(name = "dt_nascimento", nullable = true, unique = false)
 	private LocalDate dataNascimento;
 	
-	@Column(name = "senha", nullable = false, unique = true)
+	@Column(name = "senha", nullable = false)
 	private String senha;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipoUsuario", nullable = false)
+	@JoinColumn(name = "tipoUsuario")
 	private TipoUsuario tipoUsuario;
 
 	// Construtores

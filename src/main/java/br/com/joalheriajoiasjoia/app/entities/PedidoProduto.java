@@ -29,6 +29,10 @@ public class PedidoProduto {
         @JoinColumn(name = "pedidoId")
         private Pedido pedidoId;
         
+        @ManyToOne
+        @JoinColumn(name = "idProduto")
+        private Produto idProduto;
+        
         //construtores
         public PedidoProduto() {
             
