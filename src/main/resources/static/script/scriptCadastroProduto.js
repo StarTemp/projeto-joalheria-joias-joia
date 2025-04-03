@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	form.addEventListener("submit", async (event) => {
 		event.preventDefault();
 
-		const nomeProduto = document.getElementById("nome").value;
+		const nomeProduto = document.getElementById("nomeProduto").value;
 		const preco = document.getElementById("preco").value;
 		const descricao = document.getElementById("descricao").value;
 		const imgUrl = document.getElementById("imgUrl").value;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		try { 
 
-			const response = await fetch("http://localhost:8080/produtos", { 
+			const response = await fetch("http://localhost:8080/cadastroproduto", { 
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json" 
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 					descricao,
 					imgUrl,
 					categoria: {
-						id:  categoriaProduto
+						id_categoria:  categoriaProduto
 					}, 
 					tipo :{
-						id: tipoProduto
+						id_tipo: tipoProduto
 					}
 				}),
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				alert("Erro ao cadastrar o produto :(");
 			}
 		} catch (error) { 
-			console.error("Erro ao cadastrar o produto :(", error);
+			console.error("Erro ao cadastrar o produto", error);
 		}
 
 	});

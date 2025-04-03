@@ -16,24 +16,24 @@ public class Produto {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idProduto")
+	@Column(name = "idProduto", nullable = false)
 	private Long idProduto;
 	
-	@Column(name = "nome")
+	@Column(name = "nome", nullable = false)
 	private String nome;
 	
-	@Column(name = "preco")
+	@Column(name = "preco", nullable = false)
 	private double preco;
 	
-	@Column(name = "descricao")
+	@Column(name = "descricao", nullable = false)
 	private String descricao;
 	
-	@Column(name = "imagemUrl")
+	@Column(name = "imagemUrl", nullable = false)
 	private String imgUrl;
 	
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name = "material")
-	private Material material;
+	private Material material;*/
 	
 	@ManyToOne
 	@JoinColumn(name = "tipo")
