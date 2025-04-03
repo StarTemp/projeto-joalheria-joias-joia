@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="/css/estiloscadastro.css">
+    <link rel="stylesheet" href="./css/estiloscadastro.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Produto</title>
@@ -18,15 +18,11 @@
         <input type="number" name="preco" id="preco" required><br>
         
         <label for="descricao"> Descrição:</label>
-        <textarea type="text" name="telefone" id="telefone" required></textarea><br>
+        <textarea type="text" name="descricao" id="descricao" required></textarea><br>
 
         <label for="imgUrl"> Imagem:</label>
         <input type="text" name="imgUrl" id="imgUrl" required="required" autofocus><br>
 
-        <label for="tipo"> Tipo:</label>
-        <input type="text" name="tipo" id="tipo" required="required" autofocus><br>
-
-        <label for="categoria"> Categoria:</label>
 		<label for="categoriaProduto">Categoria:</label>
 		            <select id="categoriaProduto" name="categoriaProduto" required>
 		                <option value="">Selecione uma categoria</option>
@@ -43,8 +39,7 @@
 					                <option value="1">Ouro</option>
 					                <option value="2">Prata</option>
 					                <option value="3">Bijuteria</option>
-					            </select>
-        <input type="text" name="material" id="material" required="required" autofocus><br>
+					            </select><br>
 
         <p>
         <button type="submit" value="Enviar" id="enviar">Cadastrar</button>
