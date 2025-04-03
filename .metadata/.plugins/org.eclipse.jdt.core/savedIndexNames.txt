@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\DevMurilo\temp\2D\git\projeto-joalheria-joias-joia\.metadata\.plugins\org.eclipse.jdt.core
+3942322707.index
+3197107356.index
+1865797976.index
