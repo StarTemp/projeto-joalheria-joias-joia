@@ -31,20 +31,16 @@ public class Produto {
 	@Column(name = "imagemUrl", nullable = false)
 	private String imgUrl;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "material")
-	private Material material;*/
+	@ManyToOne
+	@JoinColumn(name = "tipo", nullable = false)
+	private Tipo idTipo;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipo")
-	private Tipo tipo;
+	@JoinColumn(name = "categoria", nullable = false)
+	private Categoria idCategoria;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoria")
-	private Categoria categoria;
-	
-	@ManyToOne
-	@JoinColumn(name = "idOrnamentoProduto")
+	@JoinColumn(name = "idOrnamentoProduto", nullable = false)
     private OrnamentoProduto idOrnamentoProduto;
 	
 	
@@ -90,7 +86,7 @@ public class Produto {
 		return descricao;
 	}
 
-	public void setCor(String descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 	
@@ -100,6 +96,30 @@ public class Produto {
 	
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
+	}
+
+	public Tipo getTipo() {
+		return idTipo;
+	}
+
+	public void setTipo(Tipo idTipo) {
+		this.idTipo = idTipo;
+	}
+
+	public Categoria getCategoria() {
+		return idCategoria;
+	}
+
+	public void setCategoria(Categoria idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
+	public OrnamentoProduto getIdOrnamentoProduto() {
+		return idOrnamentoProduto;
+	}
+
+	public void setIdOrnamentoProduto(OrnamentoProduto idOrnamentoProduto) {
+		this.idOrnamentoProduto = idOrnamentoProduto;
 	}
 	
 }

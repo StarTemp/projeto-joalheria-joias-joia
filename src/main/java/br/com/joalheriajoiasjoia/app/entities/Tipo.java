@@ -14,6 +14,7 @@ public class Tipo {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idTipo", nullable = false)
 	private Long idTipo;
 	
 	@Column(name = "nome", nullable = false)
@@ -27,9 +28,10 @@ public class Tipo {
 		
 	}
 	
-	public Tipo(Long idTipo, String descricao) {
+	public Tipo(Long idTipo, String descricao, String nome) {
 		this.idTipo = idTipo;
 		this.descricao = descricao;
+		this.nome = nome;
 	}
 
 	//GETTERS E SETTERS
@@ -41,11 +43,19 @@ public class Tipo {
 		this.idTipo = idTipo;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
-
-	public void setNome(String descricao) {
+	
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 

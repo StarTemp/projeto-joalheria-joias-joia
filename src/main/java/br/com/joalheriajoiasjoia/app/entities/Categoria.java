@@ -14,6 +14,7 @@ public class Categoria {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idCategoria", nullable = false)
 	private Long idCategoria;
 	
 	@Column(name = "nome")
