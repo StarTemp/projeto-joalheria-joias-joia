@@ -14,7 +14,7 @@ import br.com.joalheriajoiasjoia.app.entities.Produto;
 import br.com.joalheriajoiasjoia.app.services.ProdutoService;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/cadastroproduto")
 public class ProdutoController {
 
 	//ATRIBUTOS

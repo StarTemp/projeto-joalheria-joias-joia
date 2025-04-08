@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto</title>
+    <title>Página de Compra de Produto</title>
+    <link rel="stylesheet" href="css/produto.css">
 </head>
 <body>
-	<img id="produto-img" src="">
-	<div id="info">
-	<h2 id="produto-nome"></h2>
-	<p id="produto-descricao"></p>
-	<p id="produto-preco"></p>
-	<button id="btn-comprar">Comprar</button>
-	</div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo"><img class="logo1" src="/images/Joalheria Joias Joia (3).png" alt=""></div>
+            <div class="site-name">Joalheria Joias Joia</div>
+            <div class="auth">
+                <a href="entrarcliente.html">Login</a>
+                <a href="cadastrocliente.html">Cadastrar-se</a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <a href="#">Aneis</a>
+        <a href="#">Colares</a>
+        <a href="#">Brincos</a>
+        <a href="#">Pulseiras</a>
+        <a href="#">Relógios</a>
+        <a href="#">Pingentes</a>
+    </nav>
+    <div class="container">
+        <div class="product-image">
+            <img src="images/pulseira-prata-masculina.webp" alt="Imagem do Produto">
+        </div>
+        <div class="product-details">
+            <h1>Corrente de Prata 925</h1>
+            <p class="price">R$ 499,99</p>
+            <p class="description">
+                Nossa corrente de prata 925 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com prata de alta qualidade, esta corrente possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.
+            </p>
+            <p class="stock">Quantidades restantes: 15</p>
+            <div class="cep-container">
+                <input type="text" placeholder="Insira seu CEP">
+                <button class="cep-button">Calcular Frete</button>
+            </div>
+            <button class="buy-button">Comprar</button>
+            <button class="cart-button">Adicionar ao Carrinho</button>
+            <button class="discount-button">Inserir Desconto</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-topics">
+            <div class="topic">Atendimento ao Cliente</div>
+            <div class="topic">Nossa Empresa</div>
+            <div class="topic">Acompanhe Nossas Novidades</div>
+            <div class="topic">Email</div>
+            <div class="topic">Cadastrar</div>
+            <div class="topic">Instagram</div>
+            <div class="topic">Facebook</div>
+        </div>
+    </footer>
 </body>
 </html>
