@@ -20,17 +20,17 @@ public class OrnamentoProduto {
         @Column(name = "nome", nullable = false)
         private String nome;
         
-        @Column(name = "discricao", nullable = false)
-        private String discricao;
+        @Column(name = "descrição", nullable = false)
+        private String descricao;
         
         //construtores
         public OrnamentoProduto() {
             
         }
-        public OrnamentoProduto(Long idOrnamentoProduto, String nome, String discricao ) {
+        public OrnamentoProduto(Long idOrnamentoProduto, String nome, String descricao ) {
             this.idOrnamentoProduto = idOrnamentoProduto;
             this.nome = nome;
-            this.discricao = discricao;
+            this.descricao = descricao;
         }
         
         //getters e setters
@@ -46,11 +46,11 @@ public class OrnamentoProduto {
         public void setNome(String nome) {
             this.nome = nome;
         }
-        public String getDiscricao() {
-            return discricao;
+        public String getDescricao() {
+            return descricao;
         }
-        public void setDiscricao(String discricao) {
-            this.discricao = discricao;
+        public void setDiscricao(String descricao) {
+            this.descricao = descricao;
         }
         
         
