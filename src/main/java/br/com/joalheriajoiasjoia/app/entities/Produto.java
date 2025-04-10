@@ -1,6 +1,6 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
-import jakarta.persistence.Column; 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,10 +16,10 @@ public class Produto {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idProduto", nullable = false)
+	@Column(name = "id_produto", nullable = false)
 	private Long idProduto;
 	
-	@Column(name = "nomeProduto", nullable = false, length = 100)
+	@Column(name = "nome_produto", nullable = false, length = 100)
 	private String nomeProduto;
 	
 	@Column(name = "preco", nullable = false)
@@ -28,7 +28,7 @@ public class Produto {
 	@Column(name = "descricao", nullable = false)
 	private String descricao;
 	
-	@Column(name = "imagemUrl", nullable = false)
+	@Column(name = "imagem_url", nullable = false)
 	private String imgUrl;
 	
 	@ManyToOne
@@ -40,7 +40,7 @@ public class Produto {
 	private Categoria idCategoria;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_ornamentoProduto")
+	@JoinColumn(name = "id_ornamento_produto")
     private OrnamentoProduto idOrnamentoProduto;
 	
 	
@@ -66,14 +66,6 @@ public class Produto {
 		this.idProduto = idProduto;
 	}
 
-	public String getNome() {
-		return nomeProduto;
-	}
-
-	public void setNome(String nomeProduto) {
-		this.nomeProduto = nomeProduto;
-	}
-
 	public double getPreco() {
 		return preco;
 	}
@@ -97,4 +89,37 @@ public class Produto {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
+
+	public String getNomeProduto() {
+		return nomeProduto;
+	}
+
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+
+	public Tipo getIdTipo() {
+		return idTipo;
+	}
+
+	public void setIdTipo(Tipo idTipo) {
+		this.idTipo = idTipo;
+	}
+
+	public Categoria getIdCategoria() {
+		return idCategoria;
+	}
+
+	public void setIdCategoria(Categoria idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
+	public OrnamentoProduto getIdOrnamentoProduto() {
+		return idOrnamentoProduto;
+	}
+
+	public void setIdOrnamentoProduto(OrnamentoProduto idOrnamentoProduto) {
+		this.idOrnamentoProduto = idOrnamentoProduto;
+	}
+	
 }
