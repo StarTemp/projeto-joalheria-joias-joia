@@ -8,10 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		const preco = document.getElementById("preco").value;
 		const descricao = document.getElementById("descricao").value;
 		const imgUrl = document.getElementById("imgUrl").value;
-		const categoriaProduto = parseInt(document.getElementById("categoriaProduto").value);
-		const tipoProduto = parseInt(document.getElementById("tipoProduto").value);
 		
-
+		
 		try { 
 
 			const response = await fetch("http://localhost:8080/cadastroproduto", { 
@@ -24,11 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 					preco,
 					descricao,
 					imgUrl,
-					categoria: {
-						id_categoria:  categoriaProduto
+					categoriaProduto: {
+						idCategoria:  categoriaProduto
 					}, 
-					tipo :{
-						id_tipo: tipoProduto
+					tipoProduto:{
+						idTipo: tipoProduto
+					},
+					ornamentoProduto: {
+						idOrnamentoProduto: ornamentoProduto
 					}
 				}),
 

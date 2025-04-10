@@ -19,8 +19,8 @@ public class Produto {
 	@Column(name = "idProduto", nullable = false)
 	private Long idProduto;
 	
-	@Column(name = "nome", nullable = false)
-	private String nome;
+	@Column(name = "nomeProduto", nullable = false, length = 100)
+	private String nomeProduto;
 	
 	@Column(name = "preco", nullable = false)
 	private double preco;
@@ -32,15 +32,15 @@ public class Produto {
 	private String imgUrl;
 	
 	@ManyToOne
-	@JoinColumn(name = "tipo", nullable = false)
+	@JoinColumn(name = "id_tipo")
 	private Tipo idTipo;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoria", nullable = false)
+	@JoinColumn(name = "id_categoria")
 	private Categoria idCategoria;
 	
 	@ManyToOne
-	@JoinColumn(name = "idOrnamentoProduto", nullable = false)
+	@JoinColumn(name = "id_ornamentoProduto")
     private OrnamentoProduto idOrnamentoProduto;
 	
 	
@@ -49,9 +49,9 @@ public class Produto {
 		
 	}
 	
-	public Produto(Long idProduto, String nome, double preco, String descricao, String imgUrl) {
+	public Produto(Long idProduto, String nomeProduto, double preco, String descricao, String imgUrl) {
 		this.idProduto = idProduto;
-		this.nome = nome;
+		this.nomeProduto = nomeProduto;
 		this.preco = preco;
 		this.descricao = descricao;
 		this.imgUrl = imgUrl;
@@ -67,11 +67,11 @@ public class Produto {
 	}
 
 	public String getNome() {
-		return nome;
+		return nomeProduto;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
 	}
 
 	public double getPreco() {
@@ -97,29 +97,4 @@ public class Produto {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-
-	public Tipo getTipo() {
-		return idTipo;
-	}
-
-	public void setTipo(Tipo idTipo) {
-		this.idTipo = idTipo;
-	}
-
-	public Categoria getCategoria() {
-		return idCategoria;
-	}
-
-	public void setCategoria(Categoria idCategoria) {
-		this.idCategoria = idCategoria;
-	}
-
-	public OrnamentoProduto getIdOrnamentoProduto() {
-		return idOrnamentoProduto;
-	}
-
-	public void setIdOrnamentoProduto(OrnamentoProduto idOrnamentoProduto) {
-		this.idOrnamentoProduto = idOrnamentoProduto;
-	}
-	
 }
