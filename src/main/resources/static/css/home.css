@@ -96,7 +96,7 @@ body {
 }
 
 .offer img {
-    width: 100%;
+    width: 90%;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
