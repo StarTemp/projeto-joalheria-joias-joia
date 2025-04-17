@@ -14,7 +14,7 @@ public class Tipo {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="idTipo", nullable = false)
+	@Column(name="id_tipo", nullable = false)
 	private Long idTipo;
 	
 	@Column(name = "nome", nullable = false)

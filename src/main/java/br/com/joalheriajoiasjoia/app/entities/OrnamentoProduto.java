@@ -14,13 +14,13 @@ public class OrnamentoProduto {
     //Atributos 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name = "idOrnamentoProduto", nullable = false)
+        @Column(name = "id_ornamentoProduto", nullable = false)
         private Long idOrnamentoProduto;
 
         @Column(name = "nome", nullable = false)
         private String nome;
         
-        @Column(name = "descrição", nullable = false)
+        @Column(name = "descricao", nullable = false)
         private String descricao;
         
         //construtores
