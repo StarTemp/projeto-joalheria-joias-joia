@@ -14,13 +14,13 @@ public class Categoria {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idCategoria", nullable = false)
+	@Column(name = "id_categoria", nullable = false)
 	private Long idCategoria;
 	
-	@Column(name = "nome")
+	@Column(name = "nome", nullable = false)
 	private String nome;
 	
-	@Column(name = "descricao")
+	@Column(name = "descricao", nullable = false)
 	private String descricao;
 	
 	//CONSTRUTORES

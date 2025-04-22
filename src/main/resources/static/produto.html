@@ -27,15 +27,13 @@
     </nav>
     <div class="container">
         <div class="product-image">
-            <img src="images/pulseira-prata-masculina.webp" alt="Imagem do Produto">
+            <img src="" alt="Imagem do Produto">
         </div>
         <div class="product-details">
-            <h1>Corrente de Prata 925</h1>
-            <p class="price">R$ 499,99</p>
-            <p class="description">
-                Nossa corrente de prata 925 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com prata de alta qualidade, esta corrente possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.
-            </p>
-            <p class="stock">Quantidades restantes: 15</p>
+            <h1></h1>
+            <p class="price"></p>
+            <p class="description"></p>
+            <p class="stock"></p>
             <div class="cep-container">
                 <input type="text" placeholder="Insira seu CEP">
                 <button class="cep-button">Calcular Frete</button>
@@ -56,5 +54,60 @@
             <div class="topic">Facebook</div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const produto = params.get('produto');
+
+            if (produto) {
+                const productImage = document.querySelector('.product-image img');
+                const productTitle = document.querySelector('.product-details h1');
+                const productPrice = document.querySelector('.product-details .price');
+                const productDescription = document.querySelector('.product-details .description');
+                const productStock = document.querySelector('.product-details .stock');
+
+                // Atualize os detalhes do produto com base no parâmetro da URL
+                switch (produto) {
+                    case 'pulseira-ouro-feminina':
+                        productImage.src = 'images/pulseira-ouro-feminina.webp';
+                        productTitle.textContent = 'Pulseira de Ouro Feminina';
+                        productPrice.textContent = 'R$ 499,99';
+                        productDescription.textContent = 'Nossa pulseira de ouro feminino é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com ouro de alta qualidade, esta pulseira possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.';
+                        productStock.textContent = 'Quantidades restantes: 10';
+                        break;
+                    case 'pulseira-ouro-feminina2':
+                        productImage.src = 'images/pulseira-ouro-feminina2.webp';
+                        productTitle.textContent = 'Pulseira de Ouro Feminina 2';
+                        productPrice.textContent = 'R$ 599,99';
+                        productDescription.textContent = 'Nossa pulseira de ouro feminino 2 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com ouro de alta qualidade, esta pulseira possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.';
+                        productStock.textContent = 'Quantidades restantes: 8';
+                        break;
+                    case 'pulseira-ouro-feminina3':
+                        productImage.src = 'images/pulseira-ouro-feminina3.webp';
+                        productTitle.textContent = 'Pulseira de Ouro Feminina 3';
+                        productPrice.textContent = 'R$ 699,99';
+                        productDescription.textContent = 'Nossa pulseira de ouro feminino 3 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com ouro de alta qualidade, esta pulseira possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.';
+                        productStock.textContent = 'Quantidades restantes: 5';
+                        break;
+                    case 'pulseira-prata-masculina3':
+                        productImage.src = 'images/pulseira-prata-masculina3.webp';
+                        productTitle.textContent = 'Pulseira de Prata Masculina 3';
+                        productPrice.textContent = 'R$ 299,99';
+                        productDescription.textContent = 'Nossa pulseira de prata masculina 3 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com prata de alta qualidade, esta pulseira possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.';
+                        productStock.textContent = 'Quantidades restantes: 15';
+                        break;
+                    case 'pulseira-feminina3':
+                        productImage.src = 'images/pulseira-feminina3.png';
+                        productTitle.textContent = 'Pulseira Feminina 3';
+                        productPrice.textContent = 'R$ 399,99';
+                        productDescription.textContent = 'Nossa pulseira feminina 3 é a escolha perfeita para quem busca elegância e sofisticação. Fabricada com materiais de alta qualidade, esta pulseira possui um brilho intenso e acabamento impecável. Ideal para uso diário ou ocasiões especiais, ela complementa qualquer look com um toque de classe.';
+                        productStock.textContent = 'Quantidades restantes: 7';
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    </script>
 </body>
 </html>

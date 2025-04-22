@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		const preco = document.getElementById("preco").value;
 		const descricao = document.getElementById("descricao").value;
 		const imgUrl = document.getElementById("imgUrl").value;
-		const categoriaProduto = parseInt(document.getElementById("categoriaProduto").value);
-		const tipoProduto = parseInt(document.getElementById("tipoProduto").value);
+		const categoriaProduto = document.getElementById("categoriaProduto").value
+		const tipoProduto = document.getElementById("tipoProduto").value 
+		const ornamentoProduto = document.getElementById("ornamento").value 
 		
-
 		try { 
 
 			const response = await fetch("http://localhost:8080/cadastroproduto", { 
@@ -25,10 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 					descricao,
 					imgUrl,
 					categoria: {
-						id_categoria:  categoriaProduto
+						idCategoria:  categoriaProduto
 					}, 
-					tipo :{
-						id_tipo: tipoProduto
+					tipo:{
+						idTipo: tipoProduto
+					},
+					ornamentoProduto: {
+						idOrnamentoProduto: ornamentoProduto
 					}
 				}),
 
@@ -36,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			if (response.ok) {
 				alert("Produto cadastrado com sucesso!");
+				window.location.href = "index.html";
 			} else {
 				alert("Erro ao cadastrar o produto :(");
 			}
