@@ -116,13 +116,13 @@ body {
     color: rgb(123, 91, 59);
 }
 
-.product-details .price {
+.product-details .preco {
     font-size: 1.5rem;
     color: #b12704;
     margin-bottom: 20px;
 }
 
-.product-details .description {
+.product-details .descricao {
     font-size: 1rem;
     color: #333;
     margin-bottom: 20px;
