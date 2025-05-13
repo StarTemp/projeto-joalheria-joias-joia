@@ -18,7 +18,7 @@ import br.com.joalheriajoiasjoia.app.services.ProdutoService;
 @RequestMapping("/cadastroproduto")
 public class ProdutoController {
 
-	//ATRIBUTOS
+	
 	@Autowired
 	private ProdutoService produtoService;
 	
