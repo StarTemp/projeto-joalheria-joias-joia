@@ -23,21 +23,25 @@ public class EnderecoController {
 	private EnderecoService enderecoService;
 	
 	//MÉTODOS
+	//método para postar/salvar um endereço
 	@PostMapping
 	public Endereco createEndereco(@RequestBody Endereco endereco) {
 		return enderecoService.saveEndereco(endereco);
 	}
 	
+	//método para listar todos os endereços
 	@GetMapping
 	public List<Endereco> getAllEnderecos(){
 		return enderecoService.getAllEnderecos();
 	}
 	
+	//métodos para buscar o endereço pelo cep
 	@GetMapping("/{cep}")
 	public Endereco getEndereco(@PathVariable String cep) {
 		return enderecoService.getEnderecoByCep(cep);
 	}
 	
+	//método para deletar um endereço
 	@DeleteMapping("/{id}")
 	public void deleteEndereco(@PathVariable Long id) {
 		enderecoService.deleteEndereco(id);

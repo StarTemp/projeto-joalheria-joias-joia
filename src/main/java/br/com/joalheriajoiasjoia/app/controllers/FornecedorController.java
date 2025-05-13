@@ -23,21 +23,25 @@ public class FornecedorController {
 	private FornecedorService fornecedorService;
 	
 	//MÉTODOS
+	//método para postar/salvar um fornecedor
 	@PostMapping
 	public Fornecedor createFornecedor(@RequestBody Fornecedor fornecedor) {
 		return fornecedorService.saveFornecedor(fornecedor);
 	}
 	
+	//método para listar todos os fornecedores
 	@GetMapping
 	public List<Fornecedor> getAllFornecedores(){
 		return fornecedorService.getAllFornecedores();
 	}
 	
+	//método para buscar um fornecedor pelo id
 	@GetMapping("/{id}")
 	public Fornecedor getFornecedorById(@PathVariable Long id) {
 		return fornecedorService.getFornecedorById(id);
 	}
 	
+	//método para deletar um fornecedor
 	@DeleteMapping("/{id}")
 	public void deleteFornecedorById(@PathVariable Long id) {
 		fornecedorService.deleteFornecedor(id);

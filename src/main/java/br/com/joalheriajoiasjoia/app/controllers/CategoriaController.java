@@ -22,21 +22,25 @@ public class CategoriaController {
 	private CategoriaService categoriaService;
 	
 	//MÉTODOS
+	//método para postar/salvar uma categoria
 	@PostMapping
 	public Categoria createCategoria(@RequestBody Categoria categoria) {
 		return categoriaService.saveCategoria(categoria);
 	}
 	
+	//método para listar todas as categorias
 	@GetMapping
 	public List<Categoria> getAllCategorias() {
 		return categoriaService.getAllCategorias();
 	}
 	
+	//método para buscar a categoria pelo id
 	@GetMapping("/{id}")
 	public Categoria getCategoriaById(Long id) {
 		return categoriaService.getCategoriaById(id);
 	}
 	
+	//método para deletar uma categoria
 	@DeleteMapping("/{id}")
 	public void deleteCategoria(Long id) {
 		categoriaService.deleteCategoria(id);

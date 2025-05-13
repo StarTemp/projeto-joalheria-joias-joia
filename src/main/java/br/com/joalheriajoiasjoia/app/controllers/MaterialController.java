@@ -22,21 +22,25 @@ public class MaterialController {
 	private MaterialService materialService;
 	
 	//MÉTODOS
+	//método para postar/salvar um material
 	@PostMapping
 	public Material createMaterial(@RequestBody Material material) {
 		return materialService.saveMaterial(material);
 	}
 	
+	//método para listar todos os materiais
 	@GetMapping
 	public List<Material> getAllMateriais() {
 		return materialService.getAllMateriais();
 	}
 	
+	//método para buscar um material pelo id
 	@GetMapping("/{id}")
 	public Material getMaterialById(Long id) {
 		return materialService.getMaterialById(id);
 	}
 	
+	//método para deletar um material
 	@DeleteMapping("/{id}")
 	public void deleteMaterial(Long id) {
 		materialService.deleteMaterial(id);

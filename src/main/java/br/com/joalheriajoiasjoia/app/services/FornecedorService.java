@@ -16,18 +16,22 @@ public class FornecedorService {
 	private FornecedorRepository fornecedorRepository;
 	
 	//MÉTODOS
+	//método para salvar um fornecedor
 	public Fornecedor saveFornecedor(Fornecedor fornecedor) {
 		return fornecedorRepository.save(fornecedor);
 	}
-		
+	
+	//método para listar todos os fornecedores
 	public List<Fornecedor> getAllFornecedores(){
 		return fornecedorRepository.findAll();
 	}
-		
+	
+	//método para buscar um fornecedor pelo id
 	public Fornecedor getFornecedorById(Long id) {
 		return fornecedorRepository.findById(id).orElse(null);
 	}
-		
+	
+	//método para deletar um fornecedor
 	public void deleteFornecedor(Long id) {
 		fornecedorRepository.deleteById(id);
 	}

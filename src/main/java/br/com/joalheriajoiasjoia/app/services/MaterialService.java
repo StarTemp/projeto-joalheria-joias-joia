@@ -16,18 +16,22 @@ public class MaterialService {
 	private MaterialRepository materialRepository;
 	
 	//MÉTODOS
+	//método para salvar um material
 	public Material saveMaterial(Material material) {
 		return materialRepository.save(material);
 	}
 	
+	//método para listar todos os materiais
 	public List<Material> getAllMateriais(){
 		return materialRepository.findAll();
 	}
 	
+	//métodos para buscar o material pelo id
 	public Material getMaterialById(Long id) {
 		return materialRepository.findById(id).orElse(null);
 	}
 	
+	//método para deletar um material
 	public void deleteMaterial(Long id) {
 		materialRepository.deleteById(id);
 	}
