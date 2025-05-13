@@ -14,18 +14,19 @@ public class TipoUsuarioService {
     @Autowired
     private TipoUsuarioRepository tipoUsuarioRepository;
     
+    // Salvar um novo TipoUsuario
     public TipoUsuario saveTipoUsuario(TipoUsuario tipoUsuario) {
         return tipoUsuarioRepository.save(tipoUsuario);
     }
-    
+    // Buscar todos os TiposUsuarios
     public List<TipoUsuario> getAllTipoUsuario(){
         return tipoUsuarioRepository.findAll();
     }
-    
+    // Buscar TipoUsuario por id
     public TipoUsuario getTipoUsuarioById (Long id) {
         return tipoUsuarioRepository.findById(id).orElse(null);
     }
-    
+    // Deletar TipoUsuario
     public void deleteTipoUsuario(Long id) {
         tipoUsuarioRepository.deleteById(id);
     }

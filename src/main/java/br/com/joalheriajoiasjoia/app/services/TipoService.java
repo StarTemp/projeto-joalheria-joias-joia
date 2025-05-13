@@ -15,19 +15,19 @@ public class TipoService {
 	@Autowired
 	private TipoRepository tipoRepository;
 	
-	//MÉTODOS
+	//salvar um novo tipo
 	public Tipo saveTipo(Tipo tipo) {
 		return tipoRepository.save(tipo);
 	}
-	
+	// buscar todos os tipos
 	public List<Tipo> getAllTipos(){
 		return tipoRepository.findAll();
 	}
-	
+	//buscar tipo por id
 	public Tipo getTipoById(Long id) {
 		return tipoRepository.findById(id).orElse(null);
 	}
-	
+	//deletar tipo
 	public void deleteTipoById(Long id) {
 		tipoRepository.deleteById(id);
 	}

@@ -22,31 +22,32 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
 
+	//Criar novo usuario
 	@PostMapping
 	public Usuario createCliente(@RequestBody Usuario usuario) {
 		return usuarioService.saveUsuario(usuario);
 	}
-
+    //Listar os Usuarios
 	@GetMapping
 	public List<Usuario> getAllUsuarios() {
 		return usuarioService.getAllUsuarios();
 	}
-
+    // Buscar por id
 	@GetMapping("/{id}")
 	public Usuario getUsuario(@PathVariable Long id) {
 		return usuarioService.getUsuarioById(id);
 	}
-
+    // Atualiza o Usuario
 	@PutMapping
 	public Usuario editUsuario(@RequestBody Usuario usuario) {
 		return usuarioService.saveUsuario(usuario);
 	}
-
+     // Deleta um usuario
 	@DeleteMapping("/{id}")
 	public void deleteUsuario(@PathVariable Long id) {
 		usuarioService.deleteUsuario(id);
 	}
-
+     // Busca Usuario por cpf
 	@GetMapping("/{cpf}")
 	public Usuario getUsuarioByCpf(@PathVariable String cpf) {
 		return usuarioService.getUsuarioByCpf(cpf);

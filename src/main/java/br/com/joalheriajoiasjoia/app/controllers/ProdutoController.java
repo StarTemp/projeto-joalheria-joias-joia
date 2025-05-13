@@ -24,20 +24,21 @@ public class ProdutoController {
 	
 	//MÉTODOS
 	@PostMapping
+	//Criar um novo produto
 	public Produto createProduto(@RequestBody Produto produto) {
 		return produtoService.saveProduto(produto);
 	}
-	
+	// Listar todos os produtos
 	@GetMapping
 	public List<Produto> getAllProdutos() {
 		return produtoService.getAllProdutos();
 	}
-	
+	// Buscar por id
 	@GetMapping("/{id}")
 	public Produto getProdutoById(@PathVariable Long id) {
 		return produtoService.getProdutoById(id);
 	}
-	
+	// Excluir um produto
 	@DeleteMapping("/{id}")
 	public void deleteProduto(Long id) {
 		produtoService.deleteProduto(id);

@@ -22,22 +22,22 @@ public abstract class TipoController {
 	@Autowired
 	private TipoService tipoService;
 	
-	//MÉTODOS
+	//criar novo tipo
 	@PostMapping
 	public Tipo createTipo(@RequestBody Tipo tipo) {
 		return tipoService.saveTipo(tipo);
 	}
-	
+	// Listar todos os tipos
 	@GetMapping
 	public List<Tipo> getAllTipos(){
 		return tipoService.getAllTipos();
 	}
-	
+	// Buscar por id
 	@GetMapping("{/id}")
 	public Tipo getTipoById(@PathVariable Long id) {
 		return tipoService.getTipoById(id);
 	}
-	
+	// Deletar um tipo
 	@DeleteMapping("{/id}")
 	public void deleteTipo(@PathVariable Long id) {
 		tipoService.deleteTipoById(id);

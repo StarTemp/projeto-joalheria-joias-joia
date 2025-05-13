@@ -22,26 +22,27 @@ public class TipoUsuarioController {
     @Autowired
     private TipoUsuarioService tipoUsuarioService;
 
+    //Criar novo TipoUsuario
     @PostMapping
     public TipoUsuario createTipoUsuario(@RequestBody TipoUsuario tipoUsuario) {
         return tipoUsuarioService.saveTipoUsuario(tipoUsuario);
     }
-
+    //Listar todos os TiposUsuarios
     @GetMapping
     public List<TipoUsuario> getAllTipoUsuario() {
         return tipoUsuarioService.getAllTipoUsuario();
     }
-
+    // Buscar por id
     @GetMapping("/{id}")
     public TipoUsuario getTipoUsuario(@PathVariable Long id) {
         return tipoUsuarioService.getTipoUsuarioById(id);
     }
-
+    // Atualiza o TipoUsuarioS
     @PutMapping
     public TipoUsuario editTipoUsuario(@RequestBody TipoUsuario tipoUsuario) {
         return tipoUsuarioService.saveTipoUsuario(tipoUsuario);
     }
-
+    // Deletar um TipoUsuario
     @DeleteMapping("/{id}")
     public void deleteTipoUsuario(@PathVariable Long id) {
         tipoUsuarioService.deleteTipoUsuario(id);

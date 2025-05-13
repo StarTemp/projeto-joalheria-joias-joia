@@ -21,22 +21,23 @@ public class OrnamentosController {
 	@Autowired
 	private OrnamentosService ornamentoService;
 	
-	//MÉTODOS
+
 	@PostMapping
+	//Cria um novo Ornamento
 	public Ornamentos createOrnamento(@RequestBody Ornamentos ornamento) {
 		return ornamentoService.saveOrnamento(ornamento);
 	}
-	
+	// Lista todos os Ornamentos
 	@GetMapping
 	public List<Ornamentos> getAllOrnamentos() {
 		return ornamentoService.getAllOrnamentos();
 	}
-	
+	// Busca por id
 	@GetMapping("/{id}")
 	public Ornamentos getOrnamentoById(Long id) {
 		return ornamentoService.getOrnamentoById(id);
 	}
-	
+	// Deleta um Ornamento
 	@DeleteMapping("/{id}")
 	public void deleteOrnamento(Long id) {
 		ornamentoService.deleteOrnamento(id);

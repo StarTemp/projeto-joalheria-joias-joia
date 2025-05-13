@@ -22,26 +22,31 @@ public class PagamentoController {
     @Autowired
     private PagamentoService pagamentoService;
 
+    //Cria um novo Pagamento
     @PostMapping
     public Pagamento createPagamento(@RequestBody Pagamento pagamento) {
         return pagamentoService.savePagamento(pagamento);
     }
 
+    //Lista todos os Pagamentos
     @GetMapping
     public List<Pagamento> getAllPagamento() {
         return pagamentoService.getAllPagamento();
     }
 
+    // Busca por id
     @GetMapping("/{id}")
     public Pagamento getPagamento(@PathVariable Long id) {
         return pagamentoService.getPagamentoById(id);
     }
 
+    // Atualiza o Pagamento
     @PutMapping
     public Pagamento editPagamento(@RequestBody Pagamento pagamento) {
         return pagamentoService.savePagamento(pagamento);
     }
 
+    // Deleta um Pagamento
     @DeleteMapping("/{id}")
     public void deletePagamento(@PathVariable Long id) {
         pagamentoService.deletePagamento(id);

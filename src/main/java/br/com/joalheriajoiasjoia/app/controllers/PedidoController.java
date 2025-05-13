@@ -22,26 +22,30 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
+    //Criar um novo Pedido
     @PostMapping
     public Pedido createPedido(@RequestBody Pedido pedido) {
         return pedidoService.savePedido(pedido);
     }
-
+ 
+    //Lista todos os Pedidos
     @GetMapping
     public List<Pedido> getAllPedido() {
         return pedidoService.getAllPedido();
     }
-
+ 
+    // Busca pro id
     @GetMapping("/{id}")
     public Pedido getPedido(@PathVariable Long id) {
         return pedidoService.getPedidoById(id);
     }
-
+    
+    // Atualiza o Pedido
     @PutMapping
     public Pedido editPedido(@RequestBody Pedido pedido) {
         return pedidoService.savePedido(pedido);
     }
-
+    // Deleta um Pedido
     @DeleteMapping("/{id}")
     public void deletePedido(@PathVariable Long id) {
         pedidoService.deletePedido(id);

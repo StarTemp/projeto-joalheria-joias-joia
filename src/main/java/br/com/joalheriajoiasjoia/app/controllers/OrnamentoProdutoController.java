@@ -22,26 +22,31 @@ public class OrnamentoProdutoController {
     @Autowired
     private OrnamentoProdutoService ornamentoProdutoService;
 
+    //Cria um novo OrnamentoProduto
     @PostMapping
     public OrnamentoProduto createOrnamentoProduto(@RequestBody OrnamentoProduto ornamentoProduto) {
         return ornamentoProdutoService.saveOrnamentoProduto(ornamentoProduto);
     }
 
+    //Lista todos os OrnamentosProdutos
     @GetMapping
     public List<OrnamentoProduto> getAllOrnamentoProduto() {
         return ornamentoProdutoService.getAllOrnamentoProduto();
     }
 
+    //Busca pro id
     @GetMapping("/{id}")
     public OrnamentoProduto getOrnamentoProduto(@PathVariable Long id) {
         return ornamentoProdutoService.getOrnamentoProdutoById(id);
     }
 
+    //Atualiza o OrnamentoProduto
     @PutMapping
     public OrnamentoProduto editOrnamentoProduto(@RequestBody OrnamentoProduto ornamentoProduto) {
         return ornamentoProdutoService.saveOrnamentoProduto(ornamentoProduto);
     }
 
+    //Deleta um OrnamentoProduto
     @DeleteMapping("/{id}")
     public void deleteOrnamentoProduto(@PathVariable Long id) {
         ornamentoProdutoService.deleteOrnamentoProduto(id);
