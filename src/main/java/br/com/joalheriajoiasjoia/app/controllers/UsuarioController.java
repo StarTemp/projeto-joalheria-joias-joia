@@ -52,4 +52,26 @@ public class UsuarioController {
 	public Usuario getUsuarioByCpf(@PathVariable String cpf) {
 		return usuarioService.getUsuarioByCpf(cpf);
 	}
+	// Buscar pessoa por email
+    @GetMapping("/email/{email}")
+    public Usuario buscarPorEmail(@PathVariable String email) {
+        return usuarioService.buscarPorEmail(email);
+    }
+    
+    // Metodo de login
+    @PostMapping("/login")
+    public Usuario login(@RequestBody Usuario loginRequest) {
+        
+        //chama o serviço para verificar as credenciais
+        Usuario pessoa = usuarioService.autenticarPessoa(loginRequest.getEmail(), loginRequest.getSenha());
+        
+        if(pessoa != null ) {
+            return pessoa;
+        }
+        else {
+            return null;
+        }
+    }
+
+
 }

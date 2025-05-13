@@ -35,4 +35,24 @@ public class UsuarioService {
 	public Usuario getUsuarioByCpf(String cpf) {
 		return usuarioRepository.findByCpf(cpf);
 	}
+	 // buscar pessoa por email
+    public Usuario buscarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+	// verificar email e senha
+    public Usuario autenticarPessoa(String email, String senha) {
+        //verificar existencia de email
+        Usuario pessoa = usuarioRepository.findByEmail(email);
+        
+        if(pessoa != null && pessoa.getSenha().equals(senha)){
+         return pessoa;
+        }
+        else {
+            return null;
+        }
+    }
+    
+    
+    
+
 }
