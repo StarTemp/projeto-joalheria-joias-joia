@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 
 			const data = await response.json();
-			localStorage.setItem('pessoaId', data.id);
+			localStorage.setItem('pessoaId', data.id_usuario);
 			window.location.href = './cadastroendereco.html';
 
 		} catch (error) {

@@ -1,13 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-	
-	const pessoaId = localStorage.getItem('pessoaId');
-
-	  if (!pessoaId) {
-	      alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
-	      window.location.href = "index.html";
-	      return;
-	  }
-	
+document.addEventListener("DOMContentLoaded", () => {	  
+	  
 	document.getElementById("cep").addEventListener("input", async function(){
 		const cep = this.value.replace(/\D/g, "");
 		
@@ -24,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					return;
 				}
 				
-				
-				
 				document.getElementById("rua").value = dados.logradouro; 
 				document.getElementById("bairro").value = dados.bairro;
 				document.getElementById("cidade").value = dados.localidade;
@@ -38,6 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 	
 	const form = document.getElementById("cadastroEndereco");
+	
+	const pessoaId = localStorage.getItem('pessoaId');
+
+		  if (!pessoaId) {
+		      alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
+		      window.location.href = "cadastrocliente.html";
+		      return;
+		  }
+
 	form.addEventListener("submit", async (event) => {
 		event.preventDefault();
 
@@ -48,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const cep = document.getElementById("cep").value;
 		const rua = document.getElementById("rua").value;
 		const complemento = document.getElementById("complemento").value;
-
-		try {
 
 			const response = await fetch("http://localhost:8080/cadastroenderecos", { 
 				method: "POST",
@@ -64,21 +61,28 @@ document.addEventListener("DOMContentLoaded", () => {
 					rua,
 					cep,
 					numero,
-					complemento
-				}),
-
-			});
-
-			if (response.ok) {
-				window.location.href = "sucessocadastro.html";
-				
-			} else {
-				alert("Erro ao cadastrar o endereço");
-				
+					complemento,
+					pessoa:{
+						id_usuario: pessoaId
+					}
+				})
+			})
+			.then(response => {
+			if (!response.ok) {
+				throw new Error('Erro ao cadastrar endereço');
 			}
-		} catch (error) { 
-			console.error("Erro ao cadastrar o endereço :(", error);
-		}
+				return response.json();
+			})
 
+			.then(data => {
+				alert("Cadastro de endereço realizado com sucesso!");
+				localStorage.removeItem('pessoaId');
+				window.location.href = './index.html';
+			})
+			
+			 .catch (error => {
+				console.error('Erro no cadastro:', error);
+				alert('Falha ao cadastrar endereço. Tente novamente.');
+			});
+	    });	
 	});
-});
