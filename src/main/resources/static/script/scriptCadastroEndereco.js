@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 	
+	const pessoaId = localStorage.getItem('pessoaId');
+
+	  if (!pessoaId) {
+	      alert("Pessoa não encontrada. Por favor, cadastre uma pessoa primeiro.");
+	      window.location.href = "index.html";
+	      return;
+	  }
+	
 	document.getElementById("cep").addEventListener("input", async function(){
 		const cep = this.value.replace(/\D/g, "");
 		
@@ -15,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					alert("CEP não encontrado.")
 					return;
 				}
+				
+				
 				
 				document.getElementById("rua").value = dados.logradouro; 
 				document.getElementById("bairro").value = dados.bairro;

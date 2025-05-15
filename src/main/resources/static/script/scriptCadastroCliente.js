@@ -10,10 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		const telefone = document.getElementById("telefone").value;
 		const dataNascimento = document.getElementById("dt-nasc").value;
 		const senha = document.getElementById("senha").value;
-	
 
 		try { 
-
 			const response = await fetch("http://localhost:8080/cadastrocliente", { 
 				method: "POST",
 				headers: {
@@ -26,21 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
 					telefone,
 					dataNascimento,
 					senha,
-					tipoUsuario :{
-						id : 2
+					tipoUsuario: {
+						id: 2
 					}
-				}),
-
+				})
 			});
 
-			if (response.ok) {
-				window.location.href = "cadastroendereco.html";
-			} else {
-				alert("Erro ao cadastrar o cliente :(");
+			if (!response.ok) {
+				throw new Error('Erro ao cadastrar cliente');
 			}
-		} catch (error) { 
-			console.error("Erro ao cadastrar cliente :(", error);
-		}
 
+			const data = await response.json();
+			localStorage.setItem('pessoaId', data.id);
+			window.location.href = './cadastroendereco.html';
+
+		} catch (error) {
+			console.error('Erro no cadastro:', error);
+			alert('Falha ao cadastrar cliente. Tente novamente.');
+		}
 	});
 });
