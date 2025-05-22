@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 					throw new Error('Erro na autenticação.');
 				}
 			})
-			.then(aluno => {
-				alert('Login realizado com sucesso! Bem-vindo, ' + aluno.nome);
+			.then(usuario => {
+				alert('Login realizado com sucesso! Bem-vindo, ' + usuario.nomeUsuario);
 				// Aqui você pode redirecionar para a página de perfil, por exemplo:
 				window.location.href = 'perfilusuario.html';
 				// Também pode armazenar dados no localStorage/sessionStorage, se quiser
-				localStorage.setItem('usuarioLogado', JSON.stringify(aluno));
+				localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
 			})
 			.catch(error => {
 				alert(error.message);
