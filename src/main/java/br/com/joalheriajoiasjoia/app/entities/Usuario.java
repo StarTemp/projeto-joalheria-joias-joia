@@ -1,6 +1,6 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
-import java.time.LocalDate;
+import java.time.LocalDate; 
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,6 +41,10 @@ public class Usuario {
 	@ManyToOne
 	@JoinColumn(name = "tipoUsuario")
 	private TipoUsuario tipoUsuario;
+	
+	@ManyToOne
+	@JoinColumn(name = "endereco")
+	private Endereco id_endereco;
 
 	// Construtores
 	public Usuario() {
