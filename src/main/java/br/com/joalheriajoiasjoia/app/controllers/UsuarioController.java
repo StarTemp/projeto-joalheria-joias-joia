@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
+
+
 
 import br.com.joalheriajoiasjoia.app.entities.Usuario;
 import br.com.joalheriajoiasjoia.app.services.UsuarioService;
@@ -52,26 +55,30 @@ public class UsuarioController {
 	public Usuario getUsuarioByCpf(@PathVariable String cpf) {
 		return usuarioService.getUsuarioByCpf(cpf);
 	}
-	// Buscar pessoa por email
-    @GetMapping("/email/{email}")
-    public Usuario buscarPorEmail(@PathVariable String email) {
-        return usuarioService.buscarPorEmail(email);
-    }
+	
+	
+		@PostMapping("/login")
+		public Usuario login(@RequestBody Usuario loginRequest){//request body cria uma requisição, o loginRequest armazena os valores do email e da senha recebidos do front
+			//Objeto para armazenar o resultado da autenticação no service (pessoa ou null)
+			//Chama o método de autenticação do service passando o email e senha fornecidos no login
+			//1. loginRequest.getEmail() - obtem o email enviado pelo usuário na requisição 
+			//2. loginRequest.getSenha() - obtem a senha enviada pelo usuário na requisição
+			//3. usuarioService.autenticarPessoa(email, senha) - verifica no banco se existe um usuário com esse email e se a senha é válida
+			//4. retorna o objeto usuário autenticado ou null, caso falha na autenticação
+			Usuario pessoa = usuarioService.autenticar(loginRequest.getEmail(), loginRequest.getSenha());
+			
+			//Verifica se o service retornou um usuário válido (autenticação bem-sucedida)
+			if(pessoa != null) {
+				//Se autenticado, retorna os dados do usuário
+				return pessoa;
+			} else {
+				//Se não autenticado, retorna null indicando falha no login
+				return null;
+			}
+		}
     
-    // Metodo de login
-    @PostMapping("/login")
-    public Usuario login(@RequestBody Usuario loginRequest) {
-        
-        //chama o serviço para verificar as credenciais
-        Usuario pessoa = usuarioService.autenticarPessoa(loginRequest.getEmail(), loginRequest.getSenha());
-        
-        if(pessoa != null ) {
-            return pessoa;
-        }
-        else {
-            return null;
-        }
+   
     }
 
 
-}
+
