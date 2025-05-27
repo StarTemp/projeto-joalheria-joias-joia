@@ -1,94 +1,92 @@
-body{
-    background-color: #bea47e;
+body {
+    background-color: #bea47e; /* cor de fundo da página */
 }
 
-label, input, select, textarea{
-    display: block ;
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 20px;
+label, input, select, textarea {
+    display: block;           /* elementos em bloco */
+    width: 95%;               /* largura quase total */
+    padding: 10px;            /* espaçamento interno */
+    margin-bottom: 20px;      /* espaçamento abaixo */
 }
 
-label{
-  color: black;  
+label {
+    color: black;             /* cor do texto do label */
 }
 
-input, select, textarea{
-    background-color: #fff5e5;
+input, select, textarea {
+    background-color: #fff5e5; /* fundo claro para campos */
 }
 
-h1, h2{
-    color: black;
-    text-align: center;
+h1, h2 {
+    color: black;             /* cor dos títulos */
+    text-align: center;       /* centraliza os títulos */
 }
 
 .roboto-thin {
-   font-family: "Roboto", sans-serif;
- }
-
- form{
-    width: 500px;
-    margin: auto;
-    background: #f0dfc7;
-    padding: 40px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
- }
-
- label{
-    padding: 0;
-    margin: 0;
-    width: 100% ;
-    font-size: 18px;
- }
-
- .emlinha{
-    display: inline;
-    width: 10%;
-    font-size: 16px;
- }
-
- .medidas{
-    display: inline;
-    width: 35%;
- }
-
- input[type='checkbox'], input[type='radio']{
-   margin-right: 0px;
-   margin-left: 15px;
-  
+   font-family: "Roboto", sans-serif; /* fonte Roboto fina */
 }
 
-input:focus, select:focus, textarea:focus{
-   outline: none;
-   border: solid 1px #000000;
-  
+form {
+    width: 500px;             /* largura fixa do formulário */
+    margin: auto;             /* centraliza horizontalmente */
+    background: #f0dfc7;      /* fundo do formulário */
+    padding: 40px;            /* espaçamento interno */
+    border-radius: 10px;      /* cantos arredondados */
+    color: rgb(0, 0, 0);     /* cor do texto */
 }
 
- button{
-    width: 100%;
-   border: 2px solid rgb(56, 25, 2);
-   background-color: #dcc5a3;
-   color: rgb(56, 25, 2);
-   font-weight: bold;
-   cursor: pointer;
-   padding: 15px;
- }
+label {
+    padding: 0;               /* remove espaçamento interno */
+    margin: 0;                /* remove margem */
+    width: 100%;              /* largura total */
+    font-size: 18px;          /* tamanho da fonte */
+}
 
- button a{
-    color: rgb(56, 25, 2);
- }
+.emlinha {
+    display: inline;          /* exibe inline */
+    width: 10%;               /* largura pequena */
+    font-size: 16px;          /* tamanho da fonte */
+}
 
- button:hover{
-    background-color:rgb(56, 25, 2);
-    color: bisque;
-    transition:all linear 0.3;
- }
+.medidas {
+    display: inline;          /* exibe inline */
+    width: 35%;               /* largura média */
+}
 
- button a:hover{
-    color: bisque;
- }
+input[type='checkbox'], input[type='radio'] {
+   margin-right: 0;            /* remove margem direita */
+   margin-left: 15px;          /* margem esquerda para espaçar */
+}
 
- #sucesso{
-    margin-top: 250px;
- }
+input:focus, select:focus, textarea:focus {
+   outline: none;              /* remove contorno padrão */
+   border: solid 1px #000000;  /* borda preta ao focar */
+}
+
+button {
+    width: 100%;               /* largura total */
+    border: 2px solid rgb(56, 25, 2); /* borda escura */
+    background-color: #dcc5a3; /* fundo bege */
+    color: rgb(56, 25, 2);     /* texto escuro */
+    font-weight: bold;         /* texto em negrito */
+    cursor: pointer;           /* cursor de mão */
+    padding: 15px;             /* espaçamento interno */
+}
+
+button a {
+    color: rgb(56, 25, 2);     /* link dentro do botão */
+}
+
+button:hover {
+    background-color: rgb(56, 25, 2); /* fundo escuro ao passar mouse */
+    color: bisque;                    /* texto claro */
+    transition: all linear 0.3s;      /* animação suave */
+}
+
+button a:hover {
+    color: bisque;                  /* cor do link ao passar mouse */
+}
+
+#sucesso {
+    margin-top: 250px;             /* espaçamento superior */
+}

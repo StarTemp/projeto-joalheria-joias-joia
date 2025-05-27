@@ -2,211 +2,213 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* inclui padding e border na largura/altura */
 }
+
 :root {
-    --salmao: #8e6854;
+    --salmao: #8e6854; /* variável de cor salmão */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif; /* fonte padrão */
+    background-color: #f8f8f8;       /* fundo claro */
 }
 
 /* Cabeçalho */
 .header {
-    background-color: #f0d5ae;
-    color: rgb(123, 91, 59);
-    padding: 10px 0;
+    background-color: #f0d5ae;       /* fundo do cabeçalho */
+    color: rgb(123, 91, 59);         /* cor do texto */
+    padding: 10px 0;                 /* espaçamento vertical */
 }
 
 .header-content {
-    display: flex;
-    flex-direction: row;
+    display: flex;                   /* layout flexível */
+    flex-direction: row;             /* itens em linha */
     /* justify-content: space-between; */
-    align-items: center;
-    padding: 5px;
+    align-items: center;             /* alinha verticalmente */
+    padding: 5px;                    /* espaçamento interno */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    width: 33%;
+    font-size: 24px;                 /* tamanho do texto */
+    font-weight: bold;               /* negrito */
+    width: 33%;                     /* largura da logo */
 }
 
 .logo1 {
-    height: 20%;
-    width: 20%;
+    height: 20%;                    /* altura da imagem */
+    width: 20%;                     /* largura da imagem */
 }
 
 .site-name {
-    font-size: 20px;
-    width: 33%;
-    text-align: center;
+    font-size: 20px;                /* tamanho do texto */
+    width: 33%;                    /* largura central */
+    text-align: center;             /* centraliza texto */
 }
 
 .auth a {
-    color: rgb(123, 91, 59);
-    margin: 0 10px;
-    text-decoration: none;
+    color: rgb(123, 91, 59);        /* cor dos links */
+    margin: 0 10px;                 /* espaçamento lateral */
+    text-decoration: none;          /* remove sublinhado */
 }
 
 .auth a:hover {
-    text-decoration: underline;
+    text-decoration: underline;    /* sublinha ao passar o mouse */
 }
 
 /* Barra de navegação */
 .navbar {
-    background-color: #fadfba;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    background-color: #fadfba;      /* fundo da navbar */
+    display: flex;                  /* layout flexível */
+    justify-content: center;        /* centraliza os links */
+    padding: 10px;                  /* espaçamento */
 }
 
 .navbar a {
-    color:rgb(123, 91, 59);
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    color: rgb(123, 91, 59);        /* cor dos links */
+    text-decoration: none;          /* remove sublinhado */
+    padding: 10px 20px;             /* espaçamento interno */
+    font-size: 16px;                /* tamanho do texto */
 }
 
 .navbar a:hover {
-    background-color: #f0d5ae;
-    border-radius: 5px;
+    background-color: #f0d5ae;      /* fundo ao passar mouse */
+    border-radius: 5px;             /* cantos arredondados */
 }
 
 /* Ofertas */
-
 #ofertasespeciais {
-    text-align: center;
+    text-align: center;             /* centraliza título */
 }
 
 .main-offers {
-    padding: 20px;
-    background-color: #fff;
-    
+    padding: 20px;                  /* espaçamento interno */
+    background-color: #fff;         /* fundo branco */
 }
 
 .offers {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px;
-    
+    display: grid;                  /* layout em grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* colunas flexíveis */
+    gap: 20px;                     /* espaço entre itens */
+    padding: 10px;                 /* espaçamento interno */
 }
 
 .offer img {
-    width: 90%;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    width: 90%;                    /* largura da imagem */
+    height: auto;                  /* altura automática */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* animações suaves */
 }
 
 .offer:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    filter: brightness(90%);
+    transform: scale(1.05);        /* aumenta imagem ao passar mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* sombra */
+    filter: brightness(90%);       /* escurece um pouco */
 }
 
 .offer button {
-    background-color: var(--salmao);
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    background-color: var(--salmao); /* fundo salmão */
+    color: white;                  /* texto branco */
+    border: none;                  /* sem borda */
+    padding: 10px;                 /* espaçamento interno */
+    margin-top: 10px;              /* margem superior */
+    cursor: pointer;              /* cursor mão */
+    width: 100%;                  /* largura total */
+    font-size: 16px;              /* tamanho do texto */
+    transition: background-color 0.3s ease; /* transição suave */
 }
 
 .offer button:hover {
-    background-color: #754f39;
+    background-color: #754f39;    /* cor escurecida ao passar mouse */
 }
 
 /* Categorias */
 .categories {
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #f4f4f4;     /* fundo cinza claro */
+    padding: 20px;                 /* espaçamento interno */
 }
 
 .category-items {
-    display: flex;
-    margin-left: 70px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    display: flex;                 /* layout flexível */
+    margin-left: 70px;             /* margem esquerda */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* grid não funcional em flex */
+    gap: 20px;                    /* espaço entre itens */
 }
 
 .category img {
-    height: 200px;
-    width: 200px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    height: 200px;                /* altura da imagem */
+    width: 200px;                 /* largura da imagem */
+    transition: transform 0.3s ease, filter 0.3s ease; /* animações */
 }
 
 .category:hover img {
-    transform: scale(1.05);
-    filter: brightness(90%);
+    transform: scale(1.05);        /* aumenta imagem ao passar mouse */
+    filter: brightness(90%);       /* escurece um pouco */
 }
 
 .category button {
-    background-color: rgb(123, 91, 59);
-    justify-content: center;
-    color: white;
-    border: none;
-    padding: 20px;
-    cursor: pointer;
-    width: 200px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    background-color: rgb(123, 91, 59); /* fundo escuro */
+    justify-content: center;       /* centraliza conteúdo */
+    color: white;                  /* texto branco */
+    border: none;                  /* sem borda */
+    padding: 20px;                 /* espaçamento */
+    cursor: pointer;              /* cursor mão */
+    width: 200px;                 /* largura fixa */
+    font-size: 16px;              /* tamanho do texto */
+    transition: background-color 0.3s ease; /* transição suave */
 }
 
 .category button:hover {
-    background-color: #684a2e;
+    background-color: #684a2e;    /* fundo mais escuro ao passar mouse */
 }
 
 /* Rodapé */
 .footer {
-    background-color: #f0d5ae;
-    color: rgb(123, 91, 59);
-    padding: 20px;
-    height: 200px;
+    background-color: #f0d5ae;     /* fundo do rodapé */
+    color: rgb(123, 91, 59);       /* cor do texto */
+    padding: 20px;                 /* espaçamento */
+    height: 200px;                 /* altura fixa */
 }
 
 .footer-topics {
-    display: flex;
-    justify-content: space-evenly;
+    display: flex;                /* layout flexível */
+    justify-content: space-evenly; /* espaçamento igual */
 }
 
 .topic {
-    cursor: pointer;
+    cursor: pointer;              /* cursor mão */
 }
 
 .topic:hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* sublinha ao passar mouse */
 }
 
 /* Títulos */
 .inicio-title, .categories h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
+    text-align: center;           /* centraliza texto */
+    margin-top: 20px;             /* margem superior */
+    font-size: 24px;              /* tamanho da fonte */
 }
 
+/* Container de imagem */
 #image-container {
-    width: 100%;
-    height: 500px;
-    background-image: url(../images/container.png);
-    background-size: cover;
-    background-position: center;
-}
-.auth {
-    width: 33%; 
-    text-align: right;
-}
-.div, a{
-    color:rgb(123, 91, 59); 
+    width: 100%;                 /* largura total */
+    height: 500px;               /* altura fixa */
+    background-image: url(../images/container.png); /* imagem de fundo */
+    background-size: cover;      /* cobre todo o container */
+    background-position: center; /* centraliza a imagem */
 }
 
-.offer a{
-	color:antiquewhite;
-	text-decoration: none;
+/* Ajustes da área de autenticação */
+.auth {
+    width: 33%;                  /* largura da área */
+    text-align: right;           /* alinha à direita */
+}
+
+.div, a {
+    color: rgb(123, 91, 59);    /* cor do texto e links */
+}
+
+.offer a {
+    color: antiquewhite;         /* cor dos links nas ofertas */
+    text-decoration: none;       /* remove sublinhado */
 }

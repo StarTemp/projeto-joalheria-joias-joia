@@ -2,57 +2,68 @@
 <html lang="pt-br">
 
 <head>
-	<link rel="stylesheet" href="./css/estiloscadastro.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro Produto</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/estiloscadastro.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Produto</title>
 </head>
 
 <body>
-	<form id="cadastroProdutoForm" action="" method="post">
+    <!-- Formulário de cadastro -->
+    <form id="cadastroProdutoForm" action="" method="post">
 
-		<h1>Cadastro do produto</h1>
+        <h1>Cadastro do produto</h1>
 
-		<label for="nomeProduto"> Nome:</label>
-		<input type="text" name="nome" id="nomeProduto" required="required" autofocus><br>
+        <!-- Nome do produto -->
+        <label for="nomeProduto"> Nome:</label>
+        <input type="text" name="nome" id="nomeProduto" required autofocus><br>
 
-		<label for="preco"> Preço:</label>
-		<input type="number" name="preco" id="preco" required><br>
+        <!-- Preço -->
+        <label for="preco"> Preço:</label>
+        <input type="number" name="preco" id="preco" required><br>
 
-		<label for="descricao"> Descrição:</label>
-		<textarea type="text" name="descricao" id="descricao" required></textarea><br>
+        <!-- Descrição -->
+        <label for="descricao"> Descrição:</label>
+        <textarea name="descricao" id="descricao" required></textarea><br>
 
-		<label for="imgUrl"> Imagem:</label>
-		<input type="text" name="imgUrl" id="imgUrl" required="required" autofocus><br>
+        <!-- Imagem -->
+        <label for="imgUrl"> Imagem:</label>
+        <input type="text" name="imgUrl" id="imgUrl" required autofocus><br>
 
-		<label for="categoriaProduto">Categoria:</label>
-		<select id="categoriaProduto" name="categoriaProduto" required>
-			<option value="">Selecione uma categoria</option>
-			<option value="1">Anéis</option>
-			<option value="2">Colares</option>
-			<option value="3">Brincos</option>
-			<option value="4">Pulseiras</option>
-			<option value="5">Relógios</option>
-		</select>
+        <!-- Categoria -->
+        <label for="categoriaProduto">Categoria:</label>
+        <select id="categoriaProduto" name="categoriaProduto" required>
+            <option value="">Selecione uma categoria</option>
+            <option value="1">Anéis</option>
+            <option value="2">Colares</option>
+            <option value="3">Brincos</option>
+            <option value="4">Pulseiras</option>
+            <option value="5">Relógios</option>
+        </select>
 
-		<label for="tipoProduto">Tipo:</label>
-		<select id="tipoProduto" name="tipoProduto" required>
-			<option value="">Selecione um tipo</option>
-			<option value="1">Ouro</option>
-			<option value="2">Prata</option>
-			<option value="3">Bijuteria</option>
-		</select><br>
-		
-		<label for="ornamento"> Ornamento:</label>
-		<input type="text" name="ornamento" id="ornamento" required="required" autofocus><br>
+        <!-- Tipo -->
+        <label for="tipoProduto">Tipo:</label>
+        <select id="tipoProduto" name="tipoProduto" required>
+            <option value="">Selecione um tipo</option>
+            <option value="1">Ouro</option>
+            <option value="2">Prata</option>
+            <option value="3">Bijuteria</option>
+        </select><br>
 
+        <!-- Ornamento -->
+        <label for="ornamento"> Ornamento:</label>
+        <input type="text" name="ornamento" id="ornamento" required autofocus><br>
 
-		<p>
-			<button type="submit" value="Enviar" id="enviar">Cadastrar</button>
-		</p>
+        <!-- Botão -->
+        <p>
+            <button type="submit" id="enviar">Cadastrar</button>
+        </p>
 
-	</form>
-	<script src="./script/scriptCadastroProduto.js"></script>
+    </form>
+
+    <!-- Script -->
+    <script src="./script/scriptCadastroProduto.js"></script>
 </body>
 
 </html>

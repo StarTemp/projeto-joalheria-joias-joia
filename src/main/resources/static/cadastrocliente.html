@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- importa estilos CSS -->
     <link rel="stylesheet" href="/css/estiloscadastro.css">
+    
+    <!-- define codificação UTF-8 -->
     <meta charset="UTF-8">
+    
+    <!-- torna a página responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- título da aba do navegador -->
     <title>Cadastro Cliente</title>
 </head>
 <body>
+    <!-- formulário cadastro cliente -->
     <form id="cadastroClienteForm" action="" method="post">
 
-		<h1>Cadastro do cliente</h1>
-		
+        <!-- título do formulário -->
+        <h1>Cadastro do cliente</h1>
+
+        <!-- campo nome -->
         <label for="nome"> Nome:</label>
-        <input type="text" name="nome" id="nomeUsuario" required="required" autofocus><br>
-        
+        <input type="text" name="nome" id="nomeUsuario" required autofocus><br>
+
+        <!-- campo email -->
         <label for="email"> Email:</label>
         <input type="email" name="email" id="email" required placeholder="email@email.com"><br>
-        
+
+        <!-- campo telefone -->
         <label for="telefone"> Telefone:</label>
         <input type="tel" name="telefone" id="telefone" required><br>
-        
+
+        <!-- campo data de nascimento -->
         <label for="dt-nasc"> Data de Nascimento:</label>
         <input type="date" name="dt-nasc" id="dt-nasc" required><br>
 
+        <!-- campo CPF -->
         <label for="cpf"> CPF:</label>
-        <input type="text" name="cpf" id="cpf" required="required" autofocus><br>
+        <input type="text" name="cpf" id="cpf" required autofocus><br>
 
+        <!-- campo senha -->
         <label for="senha"> Defina uma senha:</label>
         <input type="text" name="senha" id="senha" required><br>
 
+        <!-- botão enviar -->
         <p>
-        <button type="submit" value="Enviar" id="enviar">Cadastrar</button>
+            <button type="submit" value="Enviar" id="enviar">Cadastrar</button>
         </p>
 
     </form>
-	<script src="./script/scriptCadastroCliente.js"></script>
+
+    <!-- importa script do cadastro -->
+    <script src="./script/scriptCadastroCliente.js"></script>
 </body>
 </html>

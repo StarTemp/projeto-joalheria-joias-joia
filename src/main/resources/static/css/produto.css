@@ -1,17 +1,21 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
-    --salmao: #8e6854;
+    --salmao: #8e6854; /* variável de cor principal */
 }
 
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
 
+/* Cabeçalho */
 .header {
     background-color: #f0d5ae;
     color: rgb(123, 91, 59);
@@ -21,7 +25,6 @@ body {
 .header-content {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 5px;
 }
@@ -53,6 +56,7 @@ body {
     text-decoration: underline;
 }
 
+/* Barra de navegação */
 .navbar {
     background-color: #fadfba;
     display: flex;
@@ -61,7 +65,7 @@ body {
 }
 
 .navbar a {
-    color:rgb(123, 91, 59);
+    color: rgb(123, 91, 59);
     text-decoration: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -72,6 +76,7 @@ body {
     border-radius: 5px;
 }
 
+/* Container principal do produto */
 .container {
     display: flex;
     flex-direction: column;
@@ -86,6 +91,7 @@ body {
     padding: 20px;
 }
 
+/* Imagem do produto */
 .product-img {
     width: 100%;
     display: flex;
@@ -100,6 +106,7 @@ body {
     object-fit: contain;
 }
 
+/* Detalhes do produto */
 .product-details {
     width: 100%;
     display: flex;
@@ -127,6 +134,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Campo de CEP */
 .cep-container {
     display: flex;
     justify-content: center;
@@ -156,12 +164,13 @@ body {
     background-color: #754f39;
 }
 
+/* Botões: Comprar, Carrinho, Desconto */
 .buy-button,
 .cart-button,
 .discount-button {
     padding: 10px 20px;
     background-color: var(--salmao);
-    color: rgb(255, 255, 255);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -178,6 +187,7 @@ body {
     background-color: #754f39;
 }
 
+/* Rodapé */
 .footer {
     background-color: #f0d5ae;
     color: rgb(123, 91, 59);

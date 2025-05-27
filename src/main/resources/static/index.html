@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joalheria</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <meta charset="UTF-8"> <!-- Codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>Joalheria</title> <!-- Título da aba -->
+    <link rel="stylesheet" href="/css/home.css"> <!-- Estilos da página -->
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="header-content">
-            <div class="logo"><img class="logo1" src="/images/Joalheria Joias Joia (3).png" alt=""></div>
+            <div class="logo">
+                <img class="logo1" src="/images/Joalheria Joias Joia (3).png" alt="">
+            </div>
             <div class="site-name">Joalheria Joias Joia</div>
             <div class="auth">
                 <a href="entrarcliente.html">Login</a>
                 <a href="cadastrocliente.html">Cadastrar-se</a>
-				<a href="cadastroproduto.html">Cadastre o produto</a>
+                <a href="cadastroproduto.html">Cadastre o produto</a>
             </div>
         </div>
     </header>
+
+    <!-- Menu de navegação -->
     <nav class="navbar">
         <a href="#Colares">Colares</a>
         <a href="#Brincos">Brincos</a>
@@ -25,40 +30,44 @@
         <a href="#Relogios">Relógios</a>
         <a href="cupom.html">Cupom</a>
     </nav>
-    <main>
-        <section id="image-container"> 
-		</section>
 
+    <main>
+        <!-- Seção de imagem principal -->
+        <section id="image-container"></section>
+
+        <!-- Ofertas Especiais -->
         <section class="main-offers">
             <h2 id="ofertasespeciais">Ofertas Especiais</h2>
             <div class="offers">
-				<div class="offer">
-                	<img src="/images/pulseira-ouro-feminina.webp" alt="Oferta 1">
-                	<button><a href="http://localhost:8080/produto.html?id=1">Comprar</a></button>
-                </div>
-				
+                <!-- Produto 1 -->
                 <div class="offer">
-                	<img src="/images/pulseira-ouro-feminina2.webp" alt="Oferta 2">
-                	<button><a href="http://localhost:8080/produto.html?id=2">Comprar</a></button>
+                    <img src="/images/pulseira-ouro-feminina.webp" alt="Oferta 1">
+                    <button><a href="http://localhost:8080/produto.html?id=1">Comprar</a></button>
                 </div>
-				
+                <!-- Produto 2 -->
                 <div class="offer">
-                	<img src="/images/pulseira-ouro-feminina3.webp" alt="Oferta 3">
-                	<button><a href="http://localhost:8080/produto.html?id=3">Comprar</a></button>
+                    <img src="/images/pulseira-ouro-feminina2.webp" alt="Oferta 2">
+                    <button><a href="http://localhost:8080/produto.html?id=2">Comprar</a></button>
                 </div>
-				
+                <!-- Produto 3 -->
                 <div class="offer">
-                	<img src="/images/pulseira-prata-masculina3.webp" alt="Oferta 4">
-                	<button><a href="http://localhost:8080/produto.html?id=4">Comprar</a></button>
+                    <img src="/images/pulseira-ouro-feminina3.webp" alt="Oferta 3">
+                    <button><a href="http://localhost:8080/produto.html?id=3">Comprar</a></button>
                 </div>
-				
+                <!-- Produto 4 -->
                 <div class="offer">
-					<img src="/images/pulseira-feminina3.png" alt="Oferta 5">
-                	<button><a href="http://localhost:8080/produto.html?id=5">Comprar</a></button>
+                    <img src="/images/pulseira-prata-masculina3.webp" alt="Oferta 4">
+                    <button><a href="http://localhost:8080/produto.html?id=4">Comprar</a></button>
+                </div>
+                <!-- Produto 5 -->
+                <div class="offer">
+                    <img src="/images/pulseira-feminina3.png" alt="Oferta 5">
+                    <button><a href="http://localhost:8080/produto.html?id=5">Comprar</a></button>
                 </div>
             </div>
         </section>
 
+        <!-- Categorias -->
         <section class="categories">
             <h2>Compre por Categorias</h2>
             <div class="category-items">
@@ -84,140 +93,62 @@
                 </div>
             </div>
         </section>
-		
-		<section class="main-offers" id="aneis">
-		            <h2 id="ofertasespeciais">Anéis</h2>
-		            <div class="offers">
-		                <div class="offer">
-		                    <img src="/images/anel_topazio.webp" alt="Oferta 1">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/anel_ouro.jpg_v=638772318138770000" alt="Oferta 2">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/anel_ametista2.webp" alt="Oferta 3">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/anel_solitario.jpg_v=638592417436200000" alt="Oferta 4">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/anel_masculino.jpg_v=638326283817500000" alt="Oferta 5">
-		                    <button>Comprar</button>
-		                </div>
-		            </div>
-		        </section>	
 
-                <section class="main-offers" id="Colares">
-		            <h2 id="ofertasespeciais">Colares</h2>
-		            <div class="offers">
-		                <div class="offer">
-		                    <img src="/images/colar_perola.jpg_v=638487796895200000" alt="Oferta 1">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/colar_topazio.webp" alt="Oferta 2">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/colar_ourorose.jpg_v=638539845573700000" alt="Oferta 3">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/colar_ouroeperola.webp" alt="Oferta 4">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/colar_prataesafira.webp" alt="Oferta 5">
-		                    <button>Comprar</button>
-		                </div>
-		            </div>
-		        </section>	
+        <!-- Seções por categoria -->
+        <section class="main-offers" id="aneis">
+            <h2 id="ofertasespeciais">Anéis</h2>
+            <div class="offers">
+                <div class="offer"><img src="/images/anel_topazio.webp" alt="Oferta 1"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/anel_ouro.jpg_v=638772318138770000" alt="Oferta 2"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/anel_ametista2.webp" alt="Oferta 3"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/anel_solitario.jpg_v=638592417436200000" alt="Oferta 4"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/anel_masculino.jpg_v=638326283817500000" alt="Oferta 5"><button>Comprar</button></div>
+            </div>
+        </section>
 
-                <section class="main-offers" id="Brincos">
-		            <h2 id="ofertasespeciais">Brincos</h2>
-		            <div class="offers">
-		                <div class="offer">
-		                    <img src="/images/brinco_dimantesazuis.webp" alt="Oferta 1">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/brinco_ouroamarelo.webp" alt="Oferta 2">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/brinco_prataeperola.jpg_v=638461395456670000" alt="Oferta 3">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/brinco_ourobranco.webp" alt="Oferta 4">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/brinco_perfeito.jpg_v=638539845887430000" alt="Oferta 5">
-		                    <button>Comprar</button>
-		                </div>
-		            </div>
-		        </section>	
+        <section class="main-offers" id="Colares">
+            <h2 id="ofertasespeciais">Colares</h2>
+            <div class="offers">
+                <div class="offer"><img src="/images/colar_perola.jpg_v=638487796895200000" alt="Oferta 1"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/colar_topazio.webp" alt="Oferta 2"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/colar_ourorose.jpg_v=638539845573700000" alt="Oferta 3"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/colar_ouroeperola.webp" alt="Oferta 4"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/colar_prataesafira.webp" alt="Oferta 5"><button>Comprar</button></div>
+            </div>
+        </section>
 
-                <section class="main-offers" id="pulseira">
-		            <h2 id="ofertasespeciais">Pulseiras</h2>
-		            <div class="offers">
-		                <div class="offer">
-		                    <img src="/images/pulseira_masculina.webp" alt="Oferta 1">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/pulseira_infantil.webp" alt="Oferta 2">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/pulseira_dourada.webp" alt="Oferta 3">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/pulseira_brilhante.webp" alt="Oferta 4">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/pulseira_perola.webp" alt="Oferta 5">
-		                    <button>Comprar</button>
-		                </div>
-		            </div>
-		        </section>	
+        <section class="main-offers" id="Brincos">
+            <h2 id="ofertasespeciais">Brincos</h2>
+            <div class="offers">
+                <div class="offer"><img src="/images/brinco_dimantesazuis.webp" alt="Oferta 1"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/brinco_ouroamarelo.webp" alt="Oferta 2"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/brinco_prataeperola.jpg_v=638461395456670000" alt="Oferta 3"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/brinco_ourobranco.webp" alt="Oferta 4"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/brinco_perfeito.jpg_v=638539845887430000" alt="Oferta 5"><button>Comprar</button></div>
+            </div>
+        </section>
 
-                <section class="main-offers" id="Relogios">
-		            <h2 id="ofertasespeciais">Relógios</h2>
-		            <div class="offers">
-		                <div class="offer">
-		                    <img src="/images/rellogio_masculino.webp" alt="Oferta 1">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/relogio_feminino.webp" alt="Oferta 2">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/relogio_azul.webp" alt="Oferta 3">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/relogio_roxo.webp" alt="Oferta 4">
-		                    <button>Comprar</button>
-		                </div>
-		                <div class="offer">
-		                    <img src="/images/relogio_vermelho.webp" alt="Oferta 5">
-		                    <button>Comprar</button>
-		                </div>
-		            </div>
-		        </section>	
-    </main> 
+        <section class="main-offers" id="pulseira">
+            <h2 id="ofertasespeciais">Pulseiras</h2>
+            <div class="offers">
+                <div class="offer"><img src="/images/pulseira_masculina.webp" alt="Oferta 1"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/pulseira_infantil.webp" alt="Oferta 2"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/pulseira_dourada.webp" alt="Oferta 3"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/pulseira_brilhante.webp" alt="Oferta 4"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/pulseira_perola.webp" alt="Oferta 5"><button>Comprar</button></div>
+            </div>
+        </section>
 
-       
-
-       
-
-        
+        <section class="main-offers" id="Relogios">
+            <h2 id="ofertasespeciais">Relógios</h2>
+            <div class="offers">
+                <div class="offer"><img src="/images/rellogio_masculino.webp" alt="Oferta 1"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/relogio_feminino.webp" alt="Oferta 2"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/relogio_azul.webp" alt="Oferta 3"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/relogio_roxo.webp" alt="Oferta 4"><button>Comprar</button></div>
+                <div class="offer"><img src="/images/relogio_vermelho.webp" alt="Oferta 5"><button>Comprar</button></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

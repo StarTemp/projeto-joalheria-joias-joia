@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Importa o arquivo CSS para estilos -->
     <link rel="stylesheet" href="css/estiloscadastro.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar</title>
+    
+    <meta charset="UTF-8"> <!-- Codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    
+    <title>Entrar</title> <!-- Título da aba -->
 </head>
 <body>
+  <!-- Formulário de login -->
   <form action="" id="loginForm">
 
-    <h2>Entrar : </h2>
+    <h2>Entrar :</h2>
+
+    <!-- Campo de email -->
     <label for="email"> Email:</label>
-        <input type="email" name="email" id="email" required placeholder="@email.com"><br>
+    <input type="email" name="email" id="email" required placeholder="@email.com"><br>
 
-        <label for="senha"> Senha:</label>
-        <input type="password" name="senha" id="senha" required><br>
+    <!-- Campo de senha -->
+    <label for="senha"> Senha:</label>
+    <input type="password" name="senha" id="senha" required><br>
 
-        <p>
-            <button type="submit" value="Enviar" id="enviar" >Entrar</button>
-            </p>
+    <!-- Botão de envio -->
+    <p>
+        <button type="submit" value="Enviar" id="enviar">Entrar</button>
+    </p>
     
   </form>
+
+  <!-- Script de login -->
   <script src="./script/scriptlogin.js"></script>
-    
     
 </body>
 </html>
