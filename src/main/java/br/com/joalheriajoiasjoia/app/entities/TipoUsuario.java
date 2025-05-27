@@ -1,10 +1,16 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,6 +25,12 @@ public class TipoUsuario {
 
     @Column(name = "nome", nullable = false)
     private String nome;
+    
+    @OneToMany
+    @JsonManagedReference
+    @JoinColumn(name = "usuario")
+    private List<Usuario> usuario;
+    
     
     //Construtores 
     public TipoUsuario() {
