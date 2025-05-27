@@ -1,6 +1,7 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,7 +9,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
+
 import jakarta.persistence.Table;
 
 @Entity
@@ -41,8 +43,8 @@ public class Endereco {
 	@Column(name = "estado")
 	private String estado;
 	
-	@OneToMany
-	@JsonManagedReference
+	@ManyToOne
+	@JsonBackReference
 	@JoinColumn(name = "usuarioId")
 	private Usuario usuarioId;
 	
@@ -125,5 +127,6 @@ public class Endereco {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
 	
 }
