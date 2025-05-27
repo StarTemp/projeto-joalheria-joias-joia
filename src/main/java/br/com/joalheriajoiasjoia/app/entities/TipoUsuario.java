@@ -2,14 +2,14 @@ package br.com.joalheriajoiasjoia.app.entities;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
+
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -26,10 +26,9 @@ public class TipoUsuario {
     @Column(name = "nome", nullable = false)
     private String nome;
     
-    @OneToMany
-    @JsonManagedReference
-    @JoinColumn(name = "usuario")
-    private List<Usuario> usuario;
+   // @JsonManagedReference
+    @OneToMany(mappedBy = "idUsuario") 
+    private List<Usuario> usuarios;
     
     
     //Construtores 
@@ -42,10 +41,10 @@ public class TipoUsuario {
         
     }
     //getters e setters
-    public Long getIdTipo_usuario() {
+    public Long getIdTipoUsuario() {
         return idTipoUsuario;
     }
-    public void setIdTipo_usuario(Long idTipoUsuario) {
+    public void setIdTipoUsuario(Long idTipoUsuario) {
         this.idTipoUsuario = idTipoUsuario;
     }
     public String getNome() {
@@ -53,6 +52,12 @@ public class TipoUsuario {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    public List<Usuario> getUsuario(){
+    	return usuarios;
+    }
+    public void setUsuario(List<Usuario>usuarios) {
+    	this.usuarios = usuarios;
     }
         
 }

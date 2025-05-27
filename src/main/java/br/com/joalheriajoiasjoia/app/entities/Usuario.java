@@ -1,8 +1,9 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -34,21 +36,20 @@ public class Usuario {
 	@Column(name = "telefone", nullable = false,  unique = false)
 	private String telefone;
 	
-	@Column(name = "dt_nascimento", nullable = true, unique = false)
+	@Column(name = "dt_nascimento", unique = false)
 	private LocalDate dataNascimento;
 	
 	@Column(name = "senha", nullable = false)
 	private String senha;
 	
 	@ManyToOne
-	@JsonBackReference
+	@JsonIgnoreProperties
 	@JoinColumn(name = "tipoUsuario")
 	private TipoUsuario tipoUsuario;
 	
-	@ManyToOne
-	@JsonBackReference
-	@JoinColumn(name = "endereco")
-	private Endereco id_endereco;
+	@OneToMany(mappedBy = "usuario")
+	
+	private List<Endereco> enderecos;
 
 	// Construtores
 	public Usuario() {
@@ -67,11 +68,11 @@ public class Usuario {
 	}
 	
 	//Getters e setters
-	public Long getId_usuario () {
+	public Long getIdUsuario () {
 		return idUsuario;
 	}
 	
-	public void setId_cliente (Long idUsuario) {
+	public void setIdUsuario (Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	
@@ -79,7 +80,7 @@ public class Usuario {
 		return nomeUsuario;
 	}
 	
-	public void setNome_usuario (String nomeUsuario) {
+	public void setNomeUsuario (String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
 
@@ -107,11 +108,11 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
-	public LocalDate getDt_Nascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDt_Nascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	
@@ -121,5 +122,18 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public TipoUsuario getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	
+	public List<Endereco> getEndereco() {
+		return enderecos;
+	}
+	public void setEndereco(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
 	}
 }

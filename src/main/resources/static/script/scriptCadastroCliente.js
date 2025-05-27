@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const response = await fetch("http://localhost:8080/cadastrocliente", { 
 				method: "POST",
 				headers: {
-					"Content-Type": "application/json" 
+					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({ 
 					nomeUsuario,
@@ -29,7 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					dataNascimento,
 					senha,
 					tipoUsuario: {
+<<<<<<< HEAD
 						id: 2 // Define o tipo de usuário como cliente
+=======
+						idTipoUsuario: 2
+>>>>>>> c370cb6 (Foi arrumado o back do Usuario e do TipoUsuario(agora o cadastrocliente cadastra)
 					}
 				})
 			});
