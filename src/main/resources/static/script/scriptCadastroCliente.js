@@ -29,11 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 					dataNascimento,
 					senha,
 					tipoUsuario: {
-<<<<<<< HEAD
-						id: 2 // Define o tipo de usuário como cliente
-=======
+						//id: 2 // Define o tipo de usuário como cliente
 						idTipoUsuario: 2
->>>>>>> c370cb6 (Foi arrumado o back do Usuario e do TipoUsuario(agora o cadastrocliente cadastra)
+
 					}
 				})
 			});
