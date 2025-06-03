@@ -41,10 +41,12 @@ body {
 }
 
 .site-name {
-    font-size: 20px;                /* tamanho do texto */
-    width: 33%;                    /* largura central */
-    text-align: center;             /* centraliza texto */
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    width: 33%;
+    text-align: center;
 }
+
 
 .auth a {
     color: rgb(123, 91, 59);        /* cor dos links */
