@@ -56,3 +56,10 @@ insert ignore into tb_usuario (id_usuario, cpf, dt_nascimento, email, nome_usuar
 (3, 45365423451, "2003-08-17", "roberto.silva@gmail.com", "Roberto Silva", "roberto17", 15991267874, 2),
 (4, 45667889876, "2002-07-16", "jose.francisco@gmail.com", "José Francisco", "josechico16", 15998763412, 2),
 (5, 23467858495, "2001-06-15", "tania.pereira@gmail.com", "Tânia Pereira", "tania123", 11998670854, 2);
+
+insert ignore into tb_endereco (id_endereco, bairro, cep, cidade, complemento, estado, número, rua, id_usuario) values
+(1,"Vila Leão", 18040429, "Sorocaba", "Casa rosa", "São Paulo", 123, "Rua Francisco Ferreira Leão",1),
+(2,"Centro",18010002,"Sorocaba", "Sobrado", "São Paulo", 22, "Rua da Penha", 2),
+(3, "Centro", 18010-081, "Sorocaba", "Apartamento", "São Paulo", 180, "Rua Quinze de Novembro", 3),
+(4, "Além Ponte", 18013-002, "Sorocaba", "Casa azul", "São Paulo", 23, "Avenida São Paulo", 4),
+(5,"Vila Haro", 18015-075, "Sorocaba", "Apartamento", "São Paulo",45, "Rua Tibúrcio Gabriel Torres Monteiro",5);
