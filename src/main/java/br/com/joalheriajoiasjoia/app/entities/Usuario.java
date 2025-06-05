@@ -3,7 +3,7 @@ package br.com.joalheriajoiasjoia.app.entities;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -43,12 +43,11 @@ public class Usuario {
 	private String senha;
 	
 	@ManyToOne
-	@JsonIgnoreProperties
+	@JsonBackReference
 	@JoinColumn(name = "tipoUsuario")
 	private TipoUsuario tipoUsuario;
 	
 	@OneToMany(mappedBy = "usuario")
-	
 	private List<Endereco> enderecos;
 
 	// Construtores
