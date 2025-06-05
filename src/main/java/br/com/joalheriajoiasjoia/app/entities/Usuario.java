@@ -48,7 +48,6 @@ public class Usuario {
 	private TipoUsuario tipoUsuario;
 	
 	@OneToMany(mappedBy = "usuario")
-	
 	private List<Endereco> enderecos;
 
 	// Construtores
