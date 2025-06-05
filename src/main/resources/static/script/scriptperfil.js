@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const usuarioJson = localStorage.getItem('usuarioLogado');
 
   if (!usuarioJson) {
-    alert('Usuário não está logado! Redirecionando para o login...');
-    window.location.href = 'entrarcliente.html';  // redireciona para o index.html(página home)
+    // alert('Usuário não está logado! Redirecionando para o login...');
+    window.location.href = 'index.html';  // redireciona para o index.html(página home)
     return;
   }
 
