@@ -40,8 +40,8 @@ public class Produto {
 	private Categoria idCategoria;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_ornamento_produto")
-    private OrnamentoProduto idOrnamentoProduto;
+	@JoinColumn(name = "idOrnamentoProduto")
+	private OrnamentoProduto idOrnamentoProduto;
 	
 	
 	//CONSTRUTORES

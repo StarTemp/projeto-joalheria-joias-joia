@@ -1,10 +1,13 @@
 package br.com.joalheriajoiasjoia.app.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,6 +25,9 @@ public class OrnamentoProduto {
         
         @Column(name = "descricao", nullable = false)
         private String descricao;
+        
+        @OneToMany(mappedBy = "idProduto") 
+        private List<Produto> produtos;
         
         //construtores
         public OrnamentoProduto() {
