@@ -29,9 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					dataNascimento,
 					senha,
 					tipoUsuario: {
-						//id: 2 // Define o tipo de usuário como cliente
+						//id: 2 Define o tipo de usuário como cliente
 						idTipoUsuario: 2
-
 					}
 				})
 			});

@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				email: email,
-				senha: senha
-			})
+				email,
+				senha
+			}),
 		})
 			.then(response => {
 				// Se login for bem-sucedido, retorna os dados do usuário

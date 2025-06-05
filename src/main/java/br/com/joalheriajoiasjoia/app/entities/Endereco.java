@@ -1,8 +1,4 @@
 package br.com.joalheriajoiasjoia.app.entities;
-
-
-
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -21,7 +17,7 @@ public class Endereco {
 	//ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_Endereco;
+	private Long idEndereco;
 	
 	@Column(name = "número", nullable = false, length = 4)
 	private String numero;
@@ -106,11 +102,11 @@ public class Endereco {
 	}
 
 	public Long getId_Endereco() {
-		return id_Endereco;
+		return idEndereco;
 	}
 
-	public void setId_Endereco(Long id_Endereco) {
-		this.id_Endereco = id_Endereco;
+	public void setIdEndereco(Long idEndereco) {
+		this.idEndereco = idEndereco;
 	}
 
 	public String getComplemento() {
